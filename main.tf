@@ -1,11 +1,11 @@
 provider "aws" {
-  region     = "us-east-1"
+  region     = "ap-south-1"
 }
 
 resource "aws_instance" "my_ec2_instance" { 
- ami = "ami-0261755bbcb8c4a84" 
+ ami = "ami-0f5ee92e2d63afc18" 
  instance_type = "t2.medium" 
- key_name = "devops" 
+ key_name = "Banking_project_Key" 
   
  tags ={ 
  name="Terraform_handson" 
