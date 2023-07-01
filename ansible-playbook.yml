@@ -11,10 +11,6 @@
 
   - name : Start Docker Service
     command : sudo systemctl start docker
-  - name : stop existing containers
-    shell: docker stop $(docker ps -a -q)
-  - name : delete all containers
-    shell: docker rm $(docker ps -a -q)
-
+    
   - name: Deploy Docker Container
-    command: docker run -itd -p 8090:8081 banking_container/mycontainer:latest
+    command: docker run -itd -p 8081:8081 banking_container/mycontainer:latest
